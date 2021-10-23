@@ -8,16 +8,16 @@ import java.nio.file.Paths;
 
 import static io.restassured.RestAssured.given;
 
-public class Pet {
-    String uri = "https://petstore.swagger.io/v2/pet";
+public class User {
+    String uri = "https://petstore.swagger.io/v2/user";
 
     public String lerJson(String caminhoJson) throws IOException {
         return new String(Files.readAllBytes(Paths.get(caminhoJson)));
     }
 
     @Test
-    public void incluirPet() throws IOException {
-        String jsonBody = lerJson("data/pet1.json");
+    public void incluirUser() throws IOException {
+        String jsonBody = lerJson("data/user1.json");
 
         given()
                 .contentType("application/json")
