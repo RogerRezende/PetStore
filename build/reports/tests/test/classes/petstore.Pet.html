@@ -3,17 +3,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta http-equiv="x-ua-compatible" content="IE=edge"/>
-<title>Test results - Class petstore.User</title>
+<title>Test results - Class petstore.Pet</title>
 <link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
 <link href="../css/style.css" rel="stylesheet" type="text/css"/>
 <script src="../js/report.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="content">
-<h1>Class petstore.User</h1>
+<h1>Class petstore.Pet</h1>
 <div class="breadcrumbs">
 <a href="../index.html">all</a> &gt; 
-<a href="../packages/petstore.html">petstore</a> &gt; User</div>
+<a href="../packages/petstore.html">petstore</a> &gt; Pet</div>
 <div id="summary">
 <table>
 <tr>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">5.211s</div>
+<div class="counter">5.016s</div>
 <p>duration</p>
 </div>
 </td>
@@ -78,23 +78,23 @@
 </tr>
 </thead>
 <tr>
-<td class="success">alterarUser</td>
-<td class="success">0.768s</td>
+<td class="success">alterarPet</td>
+<td class="success">0.767s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">consultarUser</td>
-<td class="success">0.818s</td>
+<td class="success">consultarPet</td>
+<td class="success">0.875s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">incluirUser</td>
-<td class="success">2.797s</td>
+<td class="success">excluirPet</td>
+<td class="success">0.778s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">login</td>
-<td class="success">0.828s</td>
+<td class="success">incluirPet</td>
+<td class="success">2.596s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -103,7 +103,7 @@
 <h2>Standard output</h2>
 <span class="code">
 <pre>Request method:	POST
-Request URI:	https://petstore.swagger.io/v2/user
+Request URI:	https://petstore.swagger.io/v2/pet
 Proxy:			&lt;none&gt;
 Request params:	&lt;none&gt;
 Query params:	&lt;none&gt;
@@ -115,17 +115,25 @@ Cookies:		&lt;none&gt;
 Multiparts:		&lt;none&gt;
 Body:
 {
-    &quot;id&quot;: 0,
-    &quot;username&quot;: &quot;batman&quot;,
-    &quot;firstName&quot;: &quot;Bruce&quot;,
-    &quot;lastName&quot;: &quot;Wayne&quot;,
-    &quot;email&quot;: &quot;bruce.wayne@batman.com&quot;,
-    &quot;password&quot;: &quot;Batman123&quot;,
-    &quot;phone&quot;: &quot;12932568741&quot;,
-    &quot;userStatus&quot;: 0
+    &quot;id&quot;: 1986012120211034,
+    &quot;category&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;dog&quot;
+    },
+    &quot;name&quot;: &quot;Julie&quot;,
+    &quot;photoUrls&quot;: [
+        &quot;string&quot;
+    ],
+    &quot;tags&quot;: [
+        {
+            &quot;id&quot;: 2021,
+            &quot;name&quot;: &quot;curso&quot;
+        }
+    ],
+    &quot;status&quot;: &quot;available&quot;
 }
 HTTP/1.1 200 OK
-Date: Sun, 24 Oct 2021 04:37:46 GMT
+Date: Sun, 24 Oct 2021 04:42:46 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -135,42 +143,25 @@ Access-Control-Allow-Headers: Content-Type, api_key, Authorization
 Server: Jetty(9.2.9.v20150224)
 
 {
-    &quot;code&quot;: 200,
-    &quot;type&quot;: &quot;unknown&quot;,
-    &quot;message&quot;: &quot;9223372000666144295&quot;
+    &quot;id&quot;: 1986012120211034,
+    &quot;category&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;dog&quot;
+    },
+    &quot;name&quot;: &quot;Julie&quot;,
+    &quot;photoUrls&quot;: [
+        &quot;string&quot;
+    ],
+    &quot;tags&quot;: [
+        {
+            &quot;id&quot;: 2021,
+            &quot;name&quot;: &quot;curso&quot;
+        }
+    ],
+    &quot;status&quot;: &quot;available&quot;
 }
 Request method:	GET
-Request URI:	https://petstore.swagger.io/v2/user/login?username=batman&amp;password=Batman123
-Proxy:			&lt;none&gt;
-Request params:	&lt;none&gt;
-Query params:	&lt;none&gt;
-Form params:	&lt;none&gt;
-Path params:	username=batman
-				password=Batman123
-Headers:		Accept=*/*
-				Content-Type=application/json; charset=UTF-8
-Cookies:		&lt;none&gt;
-Multiparts:		&lt;none&gt;
-Body:			&lt;none&gt;
-HTTP/1.1 200 OK
-Date: Sun, 24 Oct 2021 04:37:48 GMT
-Content-Type: application/json
-Transfer-Encoding: chunked
-Connection: keep-alive
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: GET, POST, DELETE, PUT
-Access-Control-Allow-Headers: Content-Type, api_key, Authorization
-X-Expires-After: Sun Oct 24 05:37:48 UTC 2021
-X-Rate-Limit: 5000
-Server: Jetty(9.2.9.v20150224)
-
-{
-    &quot;code&quot;: 200,
-    &quot;type&quot;: &quot;unknown&quot;,
-    &quot;message&quot;: &quot;logged in user session:1635050268388&quot;
-}
-Request method:	GET
-Request URI:	https://petstore.swagger.io/v2/user/batman
+Request URI:	https://petstore.swagger.io/v2/pet/1986012120211034
 Proxy:			&lt;none&gt;
 Request params:	&lt;none&gt;
 Query params:	&lt;none&gt;
@@ -182,7 +173,7 @@ Cookies:		&lt;none&gt;
 Multiparts:		&lt;none&gt;
 Body:			&lt;none&gt;
 HTTP/1.1 200 OK
-Date: Sun, 24 Oct 2021 04:37:49 GMT
+Date: Sun, 24 Oct 2021 04:42:48 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -192,17 +183,25 @@ Access-Control-Allow-Headers: Content-Type, api_key, Authorization
 Server: Jetty(9.2.9.v20150224)
 
 {
-    &quot;id&quot;: 9223372000666144273,
-    &quot;username&quot;: &quot;batman&quot;,
-    &quot;firstName&quot;: &quot;Bruce&quot;,
-    &quot;lastName&quot;: &quot;Wayne&quot;,
-    &quot;email&quot;: &quot;bruce.wayne@batman.com&quot;,
-    &quot;password&quot;: &quot;Batman123&quot;,
-    &quot;phone&quot;: &quot;12932568741&quot;,
-    &quot;userStatus&quot;: 0
+    &quot;id&quot;: 1986012120211034,
+    &quot;category&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;dog&quot;
+    },
+    &quot;name&quot;: &quot;Julie&quot;,
+    &quot;photoUrls&quot;: [
+        &quot;string&quot;
+    ],
+    &quot;tags&quot;: [
+        {
+            &quot;id&quot;: 2021,
+            &quot;name&quot;: &quot;curso&quot;
+        }
+    ],
+    &quot;status&quot;: &quot;available&quot;
 }
 Request method:	PUT
-Request URI:	https://petstore.swagger.io/v2/user/batman
+Request URI:	https://petstore.swagger.io/v2/pet
 Proxy:			&lt;none&gt;
 Request params:	&lt;none&gt;
 Query params:	&lt;none&gt;
@@ -214,17 +213,65 @@ Cookies:		&lt;none&gt;
 Multiparts:		&lt;none&gt;
 Body:
 {
-    &quot;id&quot;: 0,
-    &quot;username&quot;: &quot;batman&quot;,
-    &quot;firstName&quot;: &quot;Dick&quot;,
-    &quot;lastName&quot;: &quot;Grayson&quot;,
-    &quot;email&quot;: &quot;dick.grayson@batman.com&quot;,
-    &quot;password&quot;: &quot;Batman123&quot;,
-    &quot;phone&quot;: &quot;12932568741&quot;,
-    &quot;userStatus&quot;: 0
+    &quot;id&quot;: 1986012120211034,
+    &quot;category&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;cat&quot;
+    },
+    &quot;name&quot;: &quot;Mingau&quot;,
+    &quot;photoUrls&quot;: [
+        &quot;string&quot;
+    ],
+    &quot;tags&quot;: [
+        {
+            &quot;id&quot;: 2021,
+            &quot;name&quot;: &quot;curso&quot;
+        }
+    ],
+    &quot;status&quot;: &quot;available&quot;
 }
 HTTP/1.1 200 OK
-Date: Sun, 24 Oct 2021 04:37:49 GMT
+Date: Sun, 24 Oct 2021 04:42:49 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+
+{
+    &quot;id&quot;: 1986012120211034,
+    &quot;category&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;cat&quot;
+    },
+    &quot;name&quot;: &quot;Mingau&quot;,
+    &quot;photoUrls&quot;: [
+        &quot;string&quot;
+    ],
+    &quot;tags&quot;: [
+        {
+            &quot;id&quot;: 2021,
+            &quot;name&quot;: &quot;curso&quot;
+        }
+    ],
+    &quot;status&quot;: &quot;available&quot;
+}
+Request method:	DELETE
+Request URI:	https://petstore.swagger.io/v2/pet/1986012120211034
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+HTTP/1.1 200 OK
+Date: Sun, 24 Oct 2021 04:42:49 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -236,7 +283,7 @@ Server: Jetty(9.2.9.v20150224)
 {
     &quot;code&quot;: 200,
     &quot;type&quot;: &quot;unknown&quot;,
-    &quot;message&quot;: &quot;9223372000666144296&quot;
+    &quot;message&quot;: &quot;1986012120211034&quot;
 }
 </pre>
 </span>
@@ -249,7 +296,7 @@ Server: Jetty(9.2.9.v20150224)
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.1</a> at 24/10/2021 01:37:50</p>
+<a href="http://www.gradle.org">Gradle 7.1</a> at 24/10/2021 01:42:50</p>
 </div>
 </div>
 </body>
