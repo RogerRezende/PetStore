@@ -51,4 +51,22 @@ public class Pet {
                 .body("category.name", containsString("dog"))
         ;
     }
+
+    @Test(priority = 3)
+    public void alterarPet() throws IOException {
+        String jsonBody = lerJson("data/pet2.json");
+
+        given()
+                .contentType("application/json")
+                .log().all()
+                .body(jsonBody)
+        .when()
+                .post(uri)
+        .then()
+                .log().all()
+                .statusCode(200)
+                .body("name", is("Mingau"))
+                .body("category.name", containsString("cat"))
+        ;
+    }
 }

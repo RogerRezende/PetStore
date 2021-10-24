@@ -1,0 +1,18 @@
+{
+  "id": 1986012120211034,
+  "category": {
+    "id": 1,
+    "name": "cat"
+  },
+  "name": "Mingau",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 2021,
+      "name": "curso"
+    }
+  ],
+  "status": "available"
+}
