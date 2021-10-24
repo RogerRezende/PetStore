@@ -37,7 +37,7 @@ public class Pet {
 
     @Test(priority = 2)
     public void consultarPet() {
-        String petId = "1986012120211034";
+        String petId = "1986012120211031";
 
         given()
                 .contentType("application/json")
@@ -72,7 +72,7 @@ public class Pet {
 
     @Test(priority = 4)
     public void excluirPet() {
-        String petId = "1986012120211034";
+        String petId = "1986012120211031";
 
         given()
                 .contentType("application/json")
@@ -85,6 +85,22 @@ public class Pet {
                 .body("type", is("unknown"))
                 .body("code", is(200))
                 .body("message", is(petId))
+        ;
+    }
+
+    @Test(priority = 5)
+    public void consultarPetPorStatus() {
+        String petStatus = "available";
+
+        given()
+                .contentType("application/json")
+                .log().all()
+        .when()
+                .get(uri + "/findByStatus?status=" + petStatus)
+        .then()
+                .log().all()
+                .statusCode(200)
+                //.body("name", containsString(["Julie"]))
         ;
     }
 }
