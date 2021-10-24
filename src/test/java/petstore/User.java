@@ -70,4 +70,23 @@ public class User {
                 .body("email", is("bruce.wayne@batman.com"))
         ;
     }
+
+    @Test(priority = 4)
+    public void alterarUser() throws IOException {
+        String jsonBody = lerJson("data/user2.json");
+        String username = "batman";
+
+        given()
+                .contentType("application/json")
+                .log().all()
+                .body(jsonBody)
+        .when()
+                .put(uri + "/" + username)
+        .then()
+                .log().all()
+                .statusCode(200)
+                .body("type", is("unknown"))
+                .body("code", is(200))
+        ;
+    }
 }
