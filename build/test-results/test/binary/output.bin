@@ -21,7 +21,7 @@
     "userStatus": 0
 }
 HTTP/1.1 200 OK
-%Date: Sun, 24 Oct 2021 04:14:12 GMT
+%Date: Sun, 24 Oct 2021 04:19:21 GMT
  Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -33,7 +33,7 @@
 {
     "code": 200,
     "type": "unknown",
-%    "message": "9223372000666144309"
+%    "message": "9223372000666144291"
 }
 Request method:	GET
 [Request URI:	https://petstore.swagger.io/v2/user/login?username=batman&password=Batman123
@@ -49,19 +49,51 @@
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-%Date: Sun, 24 Oct 2021 04:14:14 GMT
+%Date: Sun, 24 Oct 2021 04:19:22 GMT
  Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
  Access-Control-Allow-Origin: *
 6Access-Control-Allow-Methods: GET, POST, DELETE, PUT
 DAccess-Control-Allow-Headers: Content-Type, api_key, Authorization
-/X-Expires-After: Sun Oct 24 05:14:14 UTC 2021
+/X-Expires-After: Sun Oct 24 05:19:22 UTC 2021
 X-Rate-Limit: 5000
  Server: Jetty(9.2.9.v20150224)
 
 {
     "code": 200,
     "type": "unknown",
-6    "message": "logged in user session:1635048854301"
+6    "message": "logged in user session:1635049162453"
 }
+Request method:	GET
+9Request URI:	https://petstore.swagger.io/v2/user/batman
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+2				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+%Date: Sun, 24 Oct 2021 04:19:23 GMT
+ Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+ Access-Control-Allow-Origin: *
+6Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+DAccess-Control-Allow-Headers: Content-Type, api_key, Authorization
+ Server: Jetty(9.2.9.v20150224)
+
+{
+    "id": 9223372000666144273,
+    "username": "batman",
+    "firstName": "Bruce",
+    "lastName": "Wayne",
+'    "email": "bruce.wayne@batman.com",
+    "password": "Batman123",
+    "phone": "12932568741",
+    "userStatus": 0
+}

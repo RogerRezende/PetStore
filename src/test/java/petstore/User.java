@@ -53,4 +53,21 @@ public class User {
                 .body("message", containsString("logged in user session"))
         ;
     }
+
+    @Test(priority = 3)
+    public void consultarUser() {
+        String username = "batman";
+
+        given()
+                .contentType("application/json")
+                .log().all()
+        .when()
+                .get(uri + "/" + username)
+        .then()
+                .log().all()
+                .statusCode(200)
+                .body("username", is("batman"))
+                .body("email", is("bruce.wayne@batman.com"))
+        ;
+    }
 }
