@@ -89,4 +89,22 @@ public class User {
                 .body("code", is(200))
         ;
     }
+
+    @Test(priority = 5)
+    public void excluirUser() {
+        String username = "batman";
+
+        given()
+                .contentType("application/json")
+                .log().all()
+        .when()
+                .delete(uri + "/" + username)
+        .then()
+                .log().all()
+                .statusCode(200)
+                .body("type", is("unknown"))
+                .body("code", is(200))
+                .body("message", is(username))
+        ;
+    }
 }

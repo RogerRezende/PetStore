@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="petstore.User" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-10-24T04:44:56" hostname="CTNDELL6NR3S63" time="5.718">
+  <properties/>
+  <testcase name="incluirUser" classname="petstore.User" time="2.445"/>
+  <testcase name="login" classname="petstore.User" time="0.944"/>
+  <testcase name="consultarUser" classname="petstore.User" time="0.804"/>
+  <testcase name="alterarUser" classname="petstore.User" time="0.8"/>
+  <testcase name="excluirUser" classname="petstore.User" time="0.722"/>
+  <system-out><![CDATA[Request method:	POST
+Request URI:	https://petstore.swagger.io/v2/user
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "id": 0,
+    "username": "batman",
+    "firstName": "Bruce",
+    "lastName": "Wayne",
+    "email": "bruce.wayne@batman.com",
+    "password": "Batman123",
+    "phone": "12932568741",
+    "userStatus": 0
+}
+HTTP/1.1 200 OK
+Date: Sun, 24 Oct 2021 04:44:58 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+
+{
+    "code": 200,
+    "type": "unknown",
+    "message": "9223372000666144298"
+}
+Request method:	GET
+Request URI:	https://petstore.swagger.io/v2/user/login?username=batman&password=Batman123
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	username=batman
+				password=Batman123
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Sun, 24 Oct 2021 04:45:00 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+X-Expires-After: Sun Oct 24 05:45:00 UTC 2021
+X-Rate-Limit: 5000
+Server: Jetty(9.2.9.v20150224)
+
+{
+    "code": 200,
+    "type": "unknown",
+    "message": "logged in user session:1635050700091"
+}
+Request method:	GET
+Request URI:	https://petstore.swagger.io/v2/user/batman
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Sun, 24 Oct 2021 04:45:00 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+
+{
+    "id": 9223372000666144258,
+    "username": "batman",
+    "firstName": "Bruce",
+    "lastName": "Wayne",
+    "email": "bruce.wayne@batman.com",
+    "password": "Batman123",
+    "phone": "Batman123",
+    "userStatus": 0
+}
+Request method:	PUT
+Request URI:	https://petstore.swagger.io/v2/user/batman
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "id": 0,
+    "username": "batman",
+    "firstName": "Dick",
+    "lastName": "Grayson",
+    "email": "dick.grayson@batman.com",
+    "password": "Batman123",
+    "phone": "12932568741",
+    "userStatus": 0
+}
+HTTP/1.1 200 OK
+Date: Sun, 24 Oct 2021 04:45:01 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+
+{
+    "code": 200,
+    "type": "unknown",
+    "message": "9223372000666144299"
+}
+Request method:	DELETE
+Request URI:	https://petstore.swagger.io/v2/user/batman
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Sun, 24 Oct 2021 04:45:02 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+
+{
+    "code": 200,
+    "type": "unknown",
+    "message": "batman"
+}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
