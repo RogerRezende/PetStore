@@ -61,7 +61,7 @@ public class Pet {
                 .log().all()
                 .body(jsonBody)
         .when()
-                .post(uri)
+                .put(uri)
         .then()
                 .log().all()
                 .statusCode(200)
