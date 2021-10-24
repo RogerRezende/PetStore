@@ -17,7 +17,7 @@ public class Pet {
         return new String(Files.readAllBytes(Paths.get(caminhoJson)));
     }
 
-    @Test
+    @Test(priority = 1)
     public void incluirPet() throws IOException {
         String jsonBody = lerJson("data/pet1.json");
 
@@ -27,6 +27,23 @@ public class Pet {
                 .body(jsonBody)
         .when()
                 .post(uri)
+        .then()
+                .log().all()
+                .statusCode(200)
+                .body("name", is("Julie"))
+                .body("category.name", containsString("dog"))
+        ;
+    }
+
+    @Test(priority = 2)
+    public void consultarPet() {
+        String petId = "1986012120211034";
+
+        given()
+                .contentType("application/json")
+                .log().all()
+        .when()
+                .get(uri + "/" + petId)
         .then()
                 .log().all()
                 .statusCode(200)

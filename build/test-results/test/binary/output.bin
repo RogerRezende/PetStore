@@ -11,7 +11,7 @@
 Multiparts:		<none>
 Body:
 {
-    "id": 0,
+    "id": 1986012120211034,
     "category": {
         "id": 1,
         "name": "dog"
@@ -31,7 +31,7 @@
     "status": "available"
 }
 HTTP/1.1 200 OK
-%Date: Sun, 24 Oct 2021 03:11:02 GMT
+%Date: Sun, 24 Oct 2021 03:50:36 GMT
  Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -41,7 +41,7 @@
  Server: Jetty(9.2.9.v20150224)
 
 {
-    "id": 9223372036854775807,
+    "id": 1986012120211034,
     "category": {
         "id": 1,
         "name": "dog"
@@ -60,3 +60,45 @@
     ],
     "status": "available"
 }
+Request method:	GET
+BRequest URI:	https://petstore.swagger.io/v2/pet/1986012120211034
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+2				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+%Date: Sun, 24 Oct 2021 03:50:37 GMT
+ Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+ Access-Control-Allow-Origin: *
+6Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+DAccess-Control-Allow-Headers: Content-Type, api_key, Authorization
+ Server: Jetty(9.2.9.v20150224)
+
+{
+    "id": 1986012120211034,
+    "category": {
+        "id": 1,
+        "name": "dog"
+    },
+    "name": "Julie",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+
+        {
+            "id": 2021,
+            "name": "curso"
+
+        }
+    ],
+    "status": "available"
+}
