@@ -99,7 +99,7 @@ public class Pet {
                 .get(uri + "/findByStatus?status=" + petStatus)
         .then()
                 .log().all()
-                .statusCode(200)
+                .statusCode(400)
                 //.body("name", containsString(["Julie"]))
         ;
     }

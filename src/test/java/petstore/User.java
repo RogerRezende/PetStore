@@ -22,6 +22,7 @@ public class User {
     public void incluirUser() throws IOException {
         String jsonBody = lerJson("data/user1.json");
 
+        String userId =
         given()
                 .contentType("application/json")
                 .log().all()
@@ -33,7 +34,11 @@ public class User {
                 .statusCode(200)
                 .body("type", is("unknown"))
                 .body("code", is(200))
+        .extract()
+                .path("message")
         ;
+
+        System.out.println("O userId e " + userId);
     }
 
     @Test(priority = 2)
