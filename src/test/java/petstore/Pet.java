@@ -7,8 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.*;
 
 public class Pet {
     String uri = "https://petstore.swagger.io/v2/pet";
@@ -99,8 +98,8 @@ public class Pet {
                 .get(uri + "/findByStatus?status=" + petStatus)
         .then()
                 .log().all()
-                .statusCode(400)
-                //.body("name", containsString(["Julie"]))
+                .statusCode(200)
+                .body("name[]", everyItem(equalTo("Julie")))
         ;
     }
 }
