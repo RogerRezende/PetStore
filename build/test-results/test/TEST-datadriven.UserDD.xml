@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="datadriven.UserDD" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-11-15T14:44:01" hostname="CTNDELL6NR3S63" time="4.921">
+  <properties/>
+  <testcase name="incluirUser[0](1000, batman, Bruce, Wayne, bruce.wayne@batman.com, Batman123, 12932568741, 0)" classname="datadriven.UserDD" time="3.246"/>
+  <testcase name="incluirUser[1](1001, asanoturna, Dick, Grayson, dick.grayson@asanoturna.com, Asa123, 12914528796, 0)" classname="datadriven.UserDD" time="0.833"/>
+  <testcase name="incluirUser[2](1002, robin, Damian, Wayne, damian.wayne@robin.com, Robin123, 12965410235, 0)" classname="datadriven.UserDD" time="0.84"/>
+  <system-out><![CDATA[Request method:	POST
+Request URI:	https://petstore.swagger.io/v2/user
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstName": "Bruce",
+    "lastName": "Wayne",
+    "password": "Batman123",
+    "userStatus": "0",
+    "phone": "12932568741",
+    "id": "1000",
+    "email": "bruce.wayne@batman.com",
+    "username": "batman"
+}
+HTTP/1.1 200 OK
+Date: Mon, 15 Nov 2021 14:44:04 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+
+{
+    "code": 200,
+    "type": "unknown",
+    "message": "1000"
+}
+O userId e 1000
+Request method:	POST
+Request URI:	https://petstore.swagger.io/v2/user
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstName": "Dick",
+    "lastName": "Grayson",
+    "password": "Asa123",
+    "userStatus": "0",
+    "phone": "12914528796",
+    "id": "1001",
+    "email": "dick.grayson@asanoturna.com",
+    "username": "asanoturna"
+}
+HTTP/1.1 200 OK
+Date: Mon, 15 Nov 2021 14:44:05 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+
+{
+    "code": 200,
+    "type": "unknown",
+    "message": "1001"
+}
+O userId e 1001
+Request method:	POST
+Request URI:	https://petstore.swagger.io/v2/user
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstName": "Damian",
+    "lastName": "Wayne",
+    "password": "Robin123",
+    "userStatus": "0",
+    "phone": "12965410235",
+    "id": "1002",
+    "email": "damian.wayne@robin.com",
+    "username": "robin"
+}
+HTTP/1.1 200 OK
+Date: Mon, 15 Nov 2021 14:44:06 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+
+{
+    "code": 200,
+    "type": "unknown",
+    "message": "1002"
+}
+O userId e 1002
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

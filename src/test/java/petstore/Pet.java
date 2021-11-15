@@ -1,6 +1,8 @@
 package petstore;
 
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import utils.Data;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -11,14 +13,16 @@ import static org.hamcrest.CoreMatchers.*;
 
 public class Pet {
     String uri = "https://petstore.swagger.io/v2/pet";
+    Data data;
 
-    public String lerJson(String caminhoJson) throws IOException {
-        return new String(Files.readAllBytes(Paths.get(caminhoJson)));
+    @BeforeMethod
+    public void setup() {
+        data = new Data();
     }
 
     @Test(priority = 1)
     public void incluirPet() throws IOException {
-        String jsonBody = lerJson("data/pet1.json");
+        String jsonBody = data.lerJson("data/pet1.json");
 
         given()
                 .contentType("application/json")
@@ -53,7 +57,7 @@ public class Pet {
 
     @Test(priority = 3)
     public void alterarPet() throws IOException {
-        String jsonBody = lerJson("data/pet2.json");
+        String jsonBody = data.lerJson("data/pet2.json");
 
         given()
                 .contentType("application/json")
